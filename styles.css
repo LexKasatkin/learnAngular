@@ -1,3 +1,27 @@
-h1{
-    color: blue;
+h1,h2,h3{
+    color: grey;
+    font-family: Garuda;
+    padding-left: 30px;
 }
+p{
+    color: black;
+    font-family: Garuda;
+    padding-left: 30px;
+    line-height: 1;
+}
+.photo_of_profile{
+    max-width: 200px;
+    margin: 10px 50px 0px 0px;
+}
+html{
+    background: lightyellow;
+}
+ul.keys{
+    line-height: 1.5;
+    margin-left: 30px;
+}
+/*li {*/
+    /*background: lightgrey;*/
+    /*border: grey;*/
+    /*border-bottom-width: thin;*/
+/*}*/

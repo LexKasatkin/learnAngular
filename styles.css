@@ -1,12 +1,15 @@
-h1,h2,h3{
-    color: grey;
-    font-family: Garuda;
-    padding-left: 30px;
+
+h1{
+    color: #060080;
+    font-size: 30px;
 }
+h2{
+    color: grey;
+    font-size:20px
+}
+
 p{
-    color: black;
-    font-family: Garuda;
-    padding-left: 30px;
+    color: #131421;
     line-height: 1;
 }
 .photo_of_profile{
@@ -15,13 +18,20 @@ p{
 }
 html{
     background: lightyellow;
+    margin: 20px 40px 20px 40px;
+    font-family: Arial;
+
 }
 ul.keys{
     line-height: 1.5;
-    margin-left: 30px;
 }
-/*li {*/
-    /*background: lightgrey;*/
-    /*border: grey;*/
-    /*border-bottom-width: thin;*/
-/*}*/
+a{
+    color: #0b00ff;
+}
+a:active{
+    color: #0068ff;
+}
+a:visited{
+    color: #8d00ff;
+
+}

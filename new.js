@@ -1,11 +1,19 @@
 "use strict";
-console.log(1 + 3);
-console.log('Hello world!');
-console.log('kdjflsjdfa');
-var t = 5;
-if (true) {
-    var t_1 = 1;
-    console.log(t_1);
-}
-console.log(t);
-console.log("this is a " + t);
+var object1 = {
+    foo: 1,
+    too: 2,
+    value: {
+        root: "string"
+    }
+};
+console.log(object1.value);
+object1.value.root = "52422";
+console.log(object1.value);
+object1.foo = 4;
+Object.freeze(object1);
+object1.foo = 5;
+console.log(object1);
+Object.freeze(object1.value);
+object1.value.root = "number";
+object1.foo = 5;
+console.log(object1);

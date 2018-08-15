@@ -1,12 +1,20 @@
-console.log(1+3);
-console.log('Hello world!');
-console.log('kdjflsjdfa');
 
-let t=5;
-if(true){
-    let t=1;
-    console.log(t);
+let object1={
+    foo:1,
+    too: 2,
+    value: {
+        root:"string"
+    }
 }
-console.log(t);
-console.log(`this is a ${t}`);
 
+console.log(object1.value);
+object1.value.root="52422";
+console.log(object1.value);
+object1.foo=4;
+Object.freeze(object1);
+object1.foo=5;
+console.log(object1);
+Object.freeze(object1.value);
+object1.value.root="number";
+object1.foo=5;
+console.log(object1);

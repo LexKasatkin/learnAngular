@@ -1,0 +1,46 @@
+h1{
+  color: #060080;
+  font-size: 30px;
+}
+h2{
+  color: grey;
+  font-size:20px
+}
+
+p{
+  color: #131421;
+  line-height: 1;
+}
+.photo_of_profile{
+  max-width: 150px;
+  margin: 5px 50px 0px 0px;
+  text-align: left;
+  float: left;
+  max-height: 150px;
+}
+html{
+  background: #feffc9;
+  padding: 20px 40px 20px 40px;
+  font-family: Arial;
+
+}
+ul.keys{
+  line-height: 1.5;
+}
+a{
+  color: #0b00ff;
+}
+a:active{
+  color: #0068ff;
+}
+a:visited{
+  color: #8d00ff;
+
+}
+table{
+  width: 100%;
+}
+td{
+  width:30px;
+  vertical-align: top;
+}

@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import {SkillComponent} from "./user/skill.component";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkillComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -226,3 +226,19 @@ interface StringArray {
 let phones:StringArray;
 phones=["Iphone7", "Samsung5"];
 console.log(phones[1]);
+
+
+function getString<T>(arg: Array<T>): string{
+    let result: string="";
+    for(let i=0;i<arg.length;i++){
+        result+=arg[i];
+    }
+    console.log(result);
+    return result;
+}
+
+getString<number>([1,2,55,67,7]);
+getString<string>(['kdjfl','kldksf;s']);
+
+
+

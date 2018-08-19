@@ -21,14 +21,10 @@
 <p>ООО "Ураган-И" г. Красноярск, программист</p>
 <h2>Ключевые навыки</h2>
 <ul class="keys">
-  <li>Java</li>
-  <li>Android SDK</li>
-  <li>SQLite</li>
-  <li>Arduino</li>
-  <li>XML</li>
-  <li>JSON</li>
-  <li>REST</li>
-  <li>GIT</li>
+  <app-skill
+  *ngFor="let s of skills"
+  [skill]="s"
+  ></app-skill>
 </ul>
 <h2>Мои проекты на GitHub</h2>
 <p><a href="http://github.com/LexKasatkin/testCourse" target="_blank">Тестовое задание</a></p>
@@ -49,5 +45,6 @@
 <h2>Знание языков</h2>
 <p>Русский — родной</p>
 <p>Английский — читаю профессиональную литературу</p>
+
 </body>
 </html>

@@ -200,3 +200,13 @@ simplefunction("kdjflsd", 4);
 var phones;
 phones = ["Iphone7", "Samsung5"];
 console.log(phones[1]);
+function getString(arg) {
+    var result = "";
+    for (var i = 0; i < arg.length; i++) {
+        result += arg[i];
+    }
+    console.log(result);
+    return result;
+}
+getString([1, 2, 55, 67, 7]);
+getString(['kdjfl', 'kldksf;s']);

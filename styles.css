@@ -35,3 +35,15 @@ a:visited{
     color: #8d00ff;
 
 }
+img{
+    margin-right: 50px;
+    text-align: left;
+    float: left;
+}
+table{
+    width: 100%;
+}
+td{
+    width:30px;
+    vertical-align: top;
+}

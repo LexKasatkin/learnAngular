@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {SkillComponent} from "./user/skill.component";
+import {SkillComponent} from "./skill/skill.component";
 import {HttpModule} from "@angular/http";
+import { AboutMyselfComponent } from './about-myself/about-myself.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillComponent
+    SkillComponent,
+    AboutMyselfComponent
   ],
   imports: [
     BrowserModule,

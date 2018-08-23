@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Портфолио Касаткин А.С.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+        rel="stylesheet" />
 </head>
 <body>
 <p>До запуска человека на Марс осталось: {{getTimeBeforeTheEvent().getFullYear()-1970}} года (лет)
@@ -14,7 +16,7 @@
   {{getTimeBeforeTheEvent().getMinutes()}} минут(ы)
   {{getTimeBeforeTheEvent().getSeconds()}} секунд(ы)
 </p>
-<h1>
+<h1 class="p-a-1">
   {{getAboutMyself().getName()}}
   <img src="http://avatars1.githubusercontent.com/u/16923686?s=400&u=f4116cf91de68006eb5baec24be75a6182cdcd07&v=4" class="photo_of_profile" alt="Фото профиля">
 </h1>

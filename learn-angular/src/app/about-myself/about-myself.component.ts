@@ -30,7 +30,7 @@ export class AboutMyselfComponent implements OnInit, OnDestroy {
     this.timeBeforeTheEvent=new Date();
     this.experience=new Date();
     this.experience.setFullYear(new Date().getFullYear()-this.aboutMyself.getStartOfWorking().getFullYear());
-    this.experience.setMonth(new Date().getFullYear()-this.aboutMyself.getStartOfWorking().getMonth());
+    this.experience.setMonth(new Date().getMonth()-this.aboutMyself.getStartOfWorking().getMonth());
   }
 
   ngOnInit() {

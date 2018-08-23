@@ -15,7 +15,6 @@ export class AboutMyselfComponent implements OnInit, OnDestroy {
   private interestingEvent:Date;//примечательное событие
   private readonly timeBeforeTheEvent:Date;//оставшееся время до примечательного события
   private timerId: number;
-  private newDate:Date;//настоящие дата и время
   private readonly experience:Date;//опыт работы
 
   constructor(skillsService: SkillsService) {
@@ -29,10 +28,9 @@ export class AboutMyselfComponent implements OnInit, OnDestroy {
     );
     this.interestingEvent=new Date(2022,10, 24);
     this.timeBeforeTheEvent=new Date();
-    this.newDate=new Date();
     this.experience=new Date();
-    this.experience.setFullYear(this.newDate.getFullYear()-this.aboutMyself.getStartOfWorking().getFullYear());
-    this.experience.setMonth(this.newDate.getMonth()-this.aboutMyself.getStartOfWorking().getMonth());
+    this.experience.setFullYear(new Date().getFullYear()-this.aboutMyself.getStartOfWorking().getFullYear());
+    this.experience.setMonth(new Date().getFullYear()-this.aboutMyself.getStartOfWorking().getMonth());
   }
 
   ngOnInit() {
@@ -41,12 +39,7 @@ export class AboutMyselfComponent implements OnInit, OnDestroy {
 
 
   setDeltaTime(){
-    this.timeBeforeTheEvent.setFullYear(this.interestingEvent.getFullYear()-new Date().getFullYear());
-    this.timeBeforeTheEvent.setMonth(this.interestingEvent.getMonth()-new Date().getMonth());
-    this.timeBeforeTheEvent.setDate(this.interestingEvent.getDate()-new Date().getDate());
-    this.timeBeforeTheEvent.setHours(this.interestingEvent.getHours()-new Date().getHours());
-    this.timeBeforeTheEvent.setMinutes(this.interestingEvent.getMinutes()-new Date().getMinutes());
-    this.timeBeforeTheEvent.setSeconds(this.interestingEvent.getSeconds()-new Date().getSeconds());
+    this.timeBeforeTheEvent.setTime(this.interestingEvent.getTime()-new Date().getTime());
   }
 
   ngOnDestroy(): void {

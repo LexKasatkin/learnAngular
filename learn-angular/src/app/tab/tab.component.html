@@ -1,0 +1,26 @@
+<div class="tabs" *ngFor="let tab of tabs;let index = index;">
+  <input class="tab" name=tab{{index}} [(ngModel)]="tabs[index].name" placeholder="item"
+         (click)="setSelectTab(tab)" type="button" checked>
+</div>
+<div style="width:100%; height:1px; clear:both;"></div> <!-- выравниваем без обтекания -->
+
+<div [ngSwitch]=true>
+  <div *ngSwitchCase="tabs[0].getActive()">
+    <app-about-myself></app-about-myself>
+  </div>
+  <div *ngSwitchCase="tabs[1].getActive()">
+    <app-contacts></app-contacts>
+  </div>
+  <div *ngSwitchCase="tabs[2].getActive()">
+    <app-experience></app-experience>
+  </div>
+  <div *ngSwitchCase="tabs[3].getActive()">
+    <h1>sfsdf</h1>
+  </div>
+  <div *ngSwitchCase="tabs[4].getActive()">
+    <h1>sfsdf</h1>
+  </div>
+  <div *ngSwitchCase="tabs[5].getActive()">
+    <h1>sfsdf</h1>
+  </div>
+</div>

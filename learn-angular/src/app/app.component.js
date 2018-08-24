@@ -7,25 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var users_service_1 = require("./users.service");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(usersService) {
-        this.usersService = usersService;
-        this.title = 'Портфолио Касаткин А.С.';
-        this.users = [];
-        this.users = this.usersService.users;
+    function AppComponent() {
+
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.usersService.getUsers().subscribe(function (users) {
-            console.log(users);
-        });
+
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css'],
-            providers: [users_service_1.UsersService]
+            providers: []
         })
     ], AppComponent);
     return AppComponent;

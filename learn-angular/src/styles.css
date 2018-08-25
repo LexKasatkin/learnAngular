@@ -1,6 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
-html{
+html {
   background: #ffffff;
   font-family: Arial;
   padding: 10px 10px 10px 10px
 }
+
+input.material {
+  font-size:14px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  padding-bottom: 8px;
+
+}
+
+label.material {
+  color:#999;
+  font-size:12px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+input.material:focus 		{ outline:none; }
+
+.btn {
+  position: relative;
+
+  display: block;
+  margin: 24px 48px 24px 276px;
+  padding: 8px 16px 8px 16px;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+  background-color: #6200ee;
+  color: #FFFFFF;
+
+  transition: background-color .3s;
+}
+
+table{
+  width: 50%;
+
+}
+td{
+  width:48px;
+  vertical-align: top;
+  text-align: center;
+}
+

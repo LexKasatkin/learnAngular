@@ -1,6 +1,6 @@
-export class Project {
-  private readonly link: string;
-  private readonly name: string;
+export class MyProject {
+  link: string;
+  name: string;
 
   constructor(link, name) {
     this.link=link;
@@ -11,7 +11,7 @@ export class Project {
     return this.link;
   }
 
-  getName() {
+  getProjectName() {
     return this.name;
   }
 }

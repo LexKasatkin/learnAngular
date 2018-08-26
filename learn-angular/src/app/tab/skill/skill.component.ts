@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {Skill} from "./skill";
-import {LocalStorage} from "../local.storage";
+import {LocalStorage} from "../../local.storage";
 
 @Component({
   selector: 'app-skill',
@@ -10,17 +10,22 @@ import {LocalStorage} from "../local.storage";
 
 export class SkillComponent {
   skills = [
-    // {name: "Бой на световых мечах"},
-    // {name: "Ярость"},
-    // {name: "Великая Сила"},
-    // {name: "Мощь"},
-    // {name: "Элементы акробатики"}
+    {name: "Бой на световых мечах"},
+    {name: "Ярость"},
+    {name: "Великая Сила"},
+    {name: "Мощь"},
+    {name: "Элементы акробатики"}
   ];
   inputSkillName: string;
   inputBoolNewSkill: boolean = false;
+  private readonly localStorage: LocalStorage;
 
   constructor() {
-    this.skills = LocalStorage.read("skills");
+      this.localStorage=new LocalStorage("s");
+      if(this.localStorage.readWithCheck()==false) {
+        this.skills = this.localStorage.read();
+      }
+      console.log(this.skills);
   }
 
   addNewSkill() {
@@ -29,7 +34,7 @@ export class SkillComponent {
       this.skills.push(skill);
       this.inputBoolNewSkill = false;
       this.inputSkillName = "";
-      LocalStorage.add("skills",this.skills);
+      this.localStorage.add(this.skills);
     }
   }
 

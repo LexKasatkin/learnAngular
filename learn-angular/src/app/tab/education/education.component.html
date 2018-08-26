@@ -1,0 +1,7 @@
+<table class="table-striped table-bordered">
+  <tr *ngFor="let education of educations;let index = index;">
+    <td><p>{{education.getYear() | date:'yyyy'}}</p></td>
+    <td><p>{{education.getUniversity()}}  {{education.getLevel()}}</p></td>
+  </tr>
+</table>
+

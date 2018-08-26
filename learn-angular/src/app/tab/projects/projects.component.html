@@ -1,0 +1,24 @@
+<ul>
+  <div *ngFor="let project of this.projects">
+  <li>
+    <p><a target="_blank" [href]="project.link">{{project.name}}</a></p>
+  </li>
+  </div>
+</ul>
+<div>
+  <button  name="myBtn" class="btn"
+           (click)="setNewItem()" type="button">+</button>
+</div>
+<div *ngIf="inputBoolNewItem">
+  <div>
+    <label class="material">Ссылка: </label>
+    <input [(ngModel)]="inputHref" name="href" class="material"  type="text">
+  </div>
+  <div>
+    <label class="material">Название: </label>
+    <input [(ngModel)]="inputName" name="name" class="material" type="text" >
+  </div>
+  <div>
+    <button  class="btn"  (click)="addNewProject()">add</button>
+  </div>
+</div>

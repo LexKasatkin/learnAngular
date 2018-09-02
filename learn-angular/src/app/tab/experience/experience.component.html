@@ -1,5 +1,9 @@
 <h2>Опыт работы {{this.experience.getFullYear()-1970}} год(а) (лет) {{this.experience.getMonth()}} месяца(ев)</h2>
 <table class="table-striped table-bordered">
+  <tr>
+    <td><p>Дата начала работы в компании</p></td>
+    <td><p>Компания</p></td>
+  </tr>
   <tr *ngFor="let job of jobs;let index = index;">
     <td><p>{{job.getStartWorking() | date:'yyyy.MM'}}</p></td>
     <td><p>{{job.getCompany()}}</p></td>

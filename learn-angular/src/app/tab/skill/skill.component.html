@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let skill of skills">{{skill.name}}</li>
+</ul>
+<div>
+  <button  name="myBtn" class="btn"
+           (click)="setNewSkill()" type="button">+</button>
+</div>
+<div *ngIf="inputBoolNewSkill">
+  <div>
+    <label class="material">Название: </label>
+    <input class="material" [(ngModel)]="inputSkillName" type="text">
+  </div>
+  <div>
+    <button  class="btn"  (click)="addNewSkill()">add</button>
+  </div>
+</div>
+
+
